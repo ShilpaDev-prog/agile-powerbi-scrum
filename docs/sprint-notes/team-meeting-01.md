@@ -72,3 +72,7 @@ The team agreed to:
 ## Next steps
 
 The next phase of work will depend on the client’s response to the clarification questions and the availability of the required datasets. Once the data environment is confirmed, the team will move into detailed planning, data review, dashboard design, and preparation of the first project version due on 1 July.
+
+## Related Documents
+* [Client Needs](../project-initiation/client-needs.md)
+* [Project Outline](../project-initiation/project-outline.md)
