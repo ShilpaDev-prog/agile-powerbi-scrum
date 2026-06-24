@@ -1,4 +1,4 @@
-# Team Meeting 2 Notes
+# Team Meeting 02 Notes (Sprint 1)
 
 **Date:** 18/06/2026  
 **Project:** DataLens Streaming  
