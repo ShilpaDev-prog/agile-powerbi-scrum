@@ -8,7 +8,7 @@ This log captures all project-related communications in chronological order, inc
 
 ---
 
-## [COMMS-01] Client Kickoff Meeting
+## [COMMS-01] Client – Sprint 1: Kickoff Meeting
 **Date:** 17/06/2026
 **From:** Bash, Innovation Manager, Business Development Department, StreamFlix
 **To:** DataLens Team
@@ -28,7 +28,7 @@ The timeline for this project is very tight. The revamped platform is already an
 
 ---
 
-## [COMMS-02] Internal – Clarifying Questions for Review
+## [COMMS-02] Internal – Sprint 1: Clarifying Questions for Review
 **Date:** 17/06/2026 05:00 PM
 **From:** Andrew Chung `<a.chung@datalens.com>`
 **To:** Bhanu Prakash `<b.prakash@datalens.com>`
@@ -64,7 +64,7 @@ DataLens Analytics Team
 
 ---
 
-## [COMMS-03] Internal – Forward: StreamFlix Raw Data
+## [COMMS-03] Internal – Sprint 1: StreamFlix Raw Data
 **Date:** 18/06/2026 10:45 AM
 **From:** Bhanu Prakash `<b.prakash@datalens.com>`
 **To:** da-team2
@@ -101,7 +101,7 @@ Product Owner
 
 ---
 
-## [COMMS-04] Internal – Sprint 1 Backlog Shared
+## [COMMS-04] Internal – Sprint 1: Backlog Shared
 **Date:** 18/06/2026 11:15 AM
 **From:** Bhanu Prakash `<b.prakash@datalens.com>`
 **To:** da-team2
@@ -124,7 +124,7 @@ Product Owner
 
 ---
 
-## [COMMS-05] Internal – Data Limitations and Cleaning Summary
+## [COMMS-05] Internal – Sprint 1: Data Limitations and Cleaning Summary
 **Date:** 19/06/2026 10:00 AM
 **From:** Sabahat Naz `<s.naz@datalens.com>`
 **To:** Bhanu Prakash `<b.prakash@datalens.com>`
@@ -180,7 +180,7 @@ DataLens Analytics Team
 
 ---
 
-## [COMMS-06] Internal – New Datasets Received (Users & Ratings)
+## [COMMS-06] Internal – Sprint 1: New Datasets Received (Users & Ratings)
 **Date:** 19/06/2026 10:45 AM
 **From:** Bhanu Prakash `<b.prakash@datalens.com>`
 **To:** da-team2
@@ -207,7 +207,7 @@ Product Owner
 
 ---
 
-## [COMMS-07] Internal – Forward: Client Data Corrections
+## [COMMS-07] Internal – Sprint 1: Client Data Corrections
 **Date:** 19/06/2026 11:30 AM
 **From:** Bhanu Prakash `<b.prakash@datalens.com>`
 **To:** da-team2
@@ -246,7 +246,7 @@ Product Owner
 
 ---
 
-## [COMMS-08] Internal – Dataset Review Summary (Users & Ratings)
+## [COMMS-08] Internal – Sprint 1: Dataset Review Summary (Users & Ratings)
 **Date:** 19/06/2026 02:30 PM
 **From:** Andrew Chung `<a.chung@datalens.com>`
 **To:** Bhanu Prakash `<b.prakash@datalens.com>`
@@ -277,7 +277,7 @@ DataLens Analytics Team
 
 ---
 
-## [COMMS-09] Internal – Sprint 1 Close and Next Phase
+## [COMMS-09] Internal – Sprint 1 Close: Next Phase Briefing
 **Date:** 22/06/2026 10:15 AM
 **From:** Bhanu Prakash `<b.prakash@datalens.com>`
 **To:** da-team2
@@ -295,3 +295,87 @@ Regards,
 
 Bhanu Prakash
 Product Owner
+
+---
+
+## [COMMS-10] Internal – Sprint 2: Python Mapping Help Request
+**Date:** 22/06/2026 12:00 PM  
+**From:** Ben Powers `<b.powers@datalens.com>`  
+**To:** da-team2  
+**Subject:** Python Mapping Help — Recommendations  
+
+Hi,
+
+I hope you’re doing well! I really need some help and I thought you might be able to point me in the right direction.
+
+I’m trying to create a colour map of the world to visualise the happiness index across different years using Python. I’ve been looking into a couple of datasets, but I’m not sure which Python libraries to use for this. Honestly, I’m feeling a bit overwhelmed because I have other tasks piling up, and I don’t have the time to figure this out right now.
+
+Could you help me with this? I’m not asking for the full solution — just some suggestions for libraries that would work well and a bit of direction to get me started.
+
+Thanks so much! Let me know what you think.
+
+Regards,
+
+Ben
+
+---
+
+## [COMMS-11] Internal – Sprint 2: Python Mapping Guidance
+**Date:** 22/06/2026 12:00 PM  
+**From:** Rakhi Porwad `<r.porwad@datalens.com>`  
+**To:** Ben Powers `<b.powers@datalens.com>`  
+**Subject:** Re: Python Mapping Help — Recommendations  
+
+Hi Ben,
+
+Thanks for reaching out. I completely understand how this can feel a bit overwhelming when you’re juggling multiple tasks. I am happy to help point you in the right direction and save you some research time!
+
+I'm balancing a few tight deadlines myself today so I won't be able to build the full solution, but I spent about 15 minutes looking into your datasets and mapped out a quick game plan to get you unblocked.
+
+For your use case (creating a world choropleth map showing happiness index across 2015–2019), the most suitable and beginner-friendly approach would be:
+- `pandas` – for loading and combining your yearly datasets. You can merge the 2015–2019 files into one DataFrame and add a `Year` column to each so they can be analysed together.
+- `plotly.express` – this is the best library for your task. It allows you to create interactive world maps very easily and also supports animation by year, which is ideal for showing changes over time.
+- *(Optional)* `geopandas` – useful if you want more advanced geographic control, but it’s not necessary for your current goal.
+
+Since you're working with separate CSVs from 2015–2019, the column names are inconsistent across years, so you'll need to standardise them before merging. Here's a suggested step-by-step approach:
+- Load each dataset individually and inspect the columns.
+- Standardise the column names across all years.
+- Add a `Year` column to each dataset.
+- Keep only the columns needed for the visualisation (e.g. `Country`, `Happiness Score`, `Year`).
+- Combine everything into a single master DataFrame.
+- Create a map for one year first to verify everything is working correctly.
+- Once that's successful, extend it to multiple years and add animation to show changes over time.
+
+Following these steps will keep things manageable and make it much easier to debug if anything looks off.
+
+Let me know if you’d like some guidance on how to structure or merge the datasets.
+
+Best regards,  
+Rakhi Porwad  
+DataLens Analytics Team
+
+---
+
+## [COMMS-12] Internal – Sprint 2: Client Request for Rating Insights
+**Date:** 23/06/2026 11:45 AM
+**From:** Bhanu Prakash `<b.prakash@datalens.com>`
+**To:** da-team2
+**Subject:** Re: Update: DataLens Streaming Project: Data Limitations and Cleaning Summary
+
+Dear Team,
+
+I have just heard/received a message from the client during the Sprint Review. This isn’t a formal request it is more of a “thinking on the fly” moment. We won’t be responding today as we are in the middle of a sprint review. However, this is a great opportunity to practise writing relevant SQL queries and clearly documenting your thinking for non-technical stakeholders
+
+Regards,
+Product Owner.
+
+> From: BASH <bash@streamflix.com>
+> Sent: 23, June, 2026 11:35AM
+> To: Product Owner
+> Subject: Streamflix Sprint 2 Update
+> 
+> Good morning!
+> Thanks again for the updates they’ve been really helpful. A thought came to mind: it might be useful to get average ratings per movie and also see how they vary between free and premium users.  > No rush just something to think about.
+> 
+> Best regards,
+> Bash
