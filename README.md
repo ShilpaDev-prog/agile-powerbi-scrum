@@ -1,4 +1,4 @@
-1# AGILE Power BI Scrum
+# AGILE Power BI Scrum
 
 > **Draft README placeholder**
 > This README is a work in progress and will be refined as the project develops.
